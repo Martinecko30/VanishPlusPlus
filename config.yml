@@ -1,0 +1,4 @@
+#Created by Martinecko30
+
+#To display players name use: {player-name}
+vanish-name-tab: "&8&l[&a&lV&8&l] &7&o{player-name}"

@@ -1,0 +1,7 @@
+join-message: "&e{player} has joined!"
+leave-message: "&e{player} left!"
+unknown-player: "&c&lUnknown player!"
+vanished-other-player: "&a&lVanished: {player}"
+no-permission: "&c&lYou don't have permission to do this"
+vanished: "&a&lYou succesfully vanished!"
+unvanished: "&c&lYou unvanished!"

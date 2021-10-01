@@ -1,0 +1,22 @@
+main: me.Martinecko30.Vanish.Vanish
+name: VanishPlusPlus
+version: 1.1
+author: Martinecko30
+description: Vanishes admins for normal players
+
+commands: 
+  vanish:
+    aliases: v
+
+permissions: 
+  vanish.*:
+    default: op
+    children:
+      vanish.vanish: true
+      vanish.info: true
+      vanish.login: true
+      vanish.logout: true
+      vanish.list: true   
+      vanish.others: true
+      vanish.interact: true
+      vanish.showvanished: true 
