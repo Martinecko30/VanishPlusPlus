@@ -50,6 +50,9 @@ public class GeneralListener implements Listener {
 	
 	@EventHandler
 	public void mobTargetsPlayer(EntityTargetLivingEntityEvent e) {
+		if(e == null)
+			return;
+			
 		if(Vanish.getInstance().isVanished((Player) e.getTarget())) {
 			e.setCancelled(true);
 		}
