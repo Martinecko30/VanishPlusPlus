@@ -138,6 +138,10 @@ public class Commands implements CommandExecutor, TabCompleter {
 				}
 				
 	            p.sendMessage(ChatColor.translateAlternateColorCodes('&', _config.getString("vanished-other-player").replace("{player}", target.getDisplayName())));
+				for(Player pl : Bukkit.getServer().getOnlinePlayers()) {
+					if(pl.hasPermission("vanish.showvanished"))
+						Vanish.getInstance().showVanished(pl);
+				}
 				return setVanish(target);
 				
 			} else {
@@ -158,7 +162,13 @@ public class Commands implements CommandExecutor, TabCompleter {
 			p.setPlayerListName(ChatColor.translateAlternateColorCodes('&', Vanish.getInstance().getConfig().getString("vanish-name-tab").replace("{player-name}", p.getDisplayName())));
 			Vanish.getInstance().vanished.add(p);
 			Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', _config.getString("leave-message").replace("{player}", p.getName())));
+			
+			for(Player pl : Bukkit.getServer().getOnlinePlayers()) {
+				if(pl.hasPermission("vanish.showvanished"))
+					Vanish.getInstance().showVanished(pl);
+			}
 			return true;
+			
 		}
 		
 		else
